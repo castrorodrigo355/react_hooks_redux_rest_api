@@ -1,12 +1,16 @@
 import React from 'react';
+import StudentsForm from './Components/StudentsForm';
 import StudentsList from "./Components/StudentsList";
-import StudentsList2 from "./Components/StudentsList2";
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <StudentsList2/>
+      <hr/>
+      <StudentsForm/>
+      <hr/>
+      <StudentsList/>
+      <hr/>
     </div>
   );
 }

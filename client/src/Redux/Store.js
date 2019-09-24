@@ -72,14 +72,19 @@ export const deleteStudentAction = (id) => {
           })
     );
   };
-  // type: 'DELETE_STUDENT',
-  // payload: id
 };
 
-export const addStudentAction = (student) => ({
-  type: 'ADD_STUDENT',
-  payload: student
-});
+export const addStudentAction = (student) => {
+  return dispatch => {
+    axios.post(`http://localhost:3000/api/students/`, student)
+    .then(res =>
+          dispatch({
+            type: "ADD_STUDENT",
+            payload: res.data
+          })
+    );
+  };
+};
 
 export const updateStudentAction = (id) => ({
   type: 'UPDATE_STUDENT',
