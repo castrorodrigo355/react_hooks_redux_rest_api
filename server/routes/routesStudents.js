@@ -39,7 +39,10 @@ router.delete("/:id", (req, res) => {
         if (err){
             res.status(404).json({ message: 'not found!'});
         } else {
-            res.json(student)
+            // res.json(student)
+            Student.find({})
+                .then(students => res.status(200).json(students))
+                .catch(err => res.status(500).json(err));
         }
     })
 });
