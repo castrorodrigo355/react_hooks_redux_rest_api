@@ -15,14 +15,13 @@ import { getStudentsAction, deleteStudentAction, updateStudentAction } from '../
 
 const StudentsList = () => {
 
+    var students = useSelector(state => state.students);
     const dispatch = useDispatch();
     
     useEffect(() => {
         dispatch(getStudentsAction())
     }, []);
 
-    var students = useSelector(state => state.students);
-    
     const deleteStudent = (id) => dispatch(deleteStudentAction(id));
     const updateStudent = (id) => dispatch(updateStudentAction(id));
 

@@ -21,7 +21,7 @@ export const store = createStore(
             // window.devToolsExtension && window.devToolsExtension()
 );
 // Reducer
-function reducer(state, action) {
+export default function reducer(state, action) {
   switch (action.type) {
     case 'GET_STUDENTS':
     return {

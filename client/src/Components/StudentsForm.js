@@ -26,7 +26,7 @@ const StudentsForm = () => {
     }
 
     return (
-        <div>
+        <div className="container">
             <form onSubmit={onSubmit}>
                 <div className="form-group">
                     <label htmlFor="name">Name</label>
